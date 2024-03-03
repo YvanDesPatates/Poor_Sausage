@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class followPlayer : MonoBehaviour
+public class FollowPlayer : MonoBehaviour
 {
     public Transform targetPosition;
     public Transform targetRotation;
