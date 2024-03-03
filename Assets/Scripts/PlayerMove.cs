@@ -12,7 +12,7 @@ public class PlayerMove : MonoBehaviour
     private float _verticalInput;
     private float _horizontalMouseInput;
     
-    private Rigidbody _rigidBody;
+    private Rigidbody _rigidBody;   
     
     // Start is called before the first frame update
     void Start()
