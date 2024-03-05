@@ -4,6 +4,7 @@ using UnityEngine;
 public class GameControllerScript : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
+    public GameObject gameOverCanvas;
 
     private int _score = 0;
     
@@ -15,6 +16,6 @@ public class GameControllerScript : MonoBehaviour
     
     public void GameOver()
     {
-        scoreText.text = "Game Over";
+        gameOverCanvas.SetActive(true);
     }
 }
