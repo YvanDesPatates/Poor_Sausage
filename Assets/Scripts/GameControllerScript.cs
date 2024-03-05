@@ -12,4 +12,9 @@ public class GameControllerScript : MonoBehaviour
         _score++;
         scoreText.text = _score.ToString();
     }
+    
+    public void GameOver()
+    {
+        scoreText.text = "Game Over";
+    }
 }
