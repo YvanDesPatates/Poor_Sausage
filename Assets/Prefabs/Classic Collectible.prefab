@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 4888287089623416325}
   - component: {fileID: 4660030691010702795}
   - component: {fileID: 5387926359373286577}
-  - component: {fileID: 2942013071032935336}
+  - component: {fileID: 2276742050503283452}
   m_Layer: 0
-  m_Name: Collectible
+  m_Name: Classic Collectible
   m_TagString: Collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -134,7 +134,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2942013071032935336
+--- !u!114 &2276742050503283452
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,7 +143,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 7220615864193929741}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a19468665a5c4890fa94e2bf1c9b5b32, type: 3}
+  m_Script: {fileID: 11500000, guid: a6ae7933c93344aacbe68461cd6bef2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 50

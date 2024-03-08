@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CollectibleSrcipt : MonoBehaviour
+public abstract class CollectibleSrcipt : MonoBehaviour
 {
     public float rotationSpeed = 10;
 
@@ -16,12 +16,19 @@ public class CollectibleSrcipt : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            _collectibleManager.CollectibleWasPickedUp(gameObject);
+            AlertManagerCollectibleWasPickedUp();
         }
     }
     
     public void SetCollectibleManager(CollectibleManagerScript collectibleManager)
     {
         _collectibleManager = collectibleManager;
+    }
+
+    protected abstract void AlertManagerCollectibleWasPickedUp();
+    
+    protected CollectibleManagerScript GetCollectibleManager()
+    {
+        return _collectibleManager;
     }
 }

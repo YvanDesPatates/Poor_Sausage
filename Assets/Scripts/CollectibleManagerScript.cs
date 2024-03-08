@@ -23,16 +23,23 @@ public class CollectibleManagerScript : MonoBehaviour
 
     public void CollectibleWasPickedUp(GameObject collectible)
     {
-        _gameController.IncrementScore();
+        _gameController.PlayerPickedUpCollectibe();
         Destroy(collectible);
         SpawnCollectible();
+    }
+    
+    public void SuperCollectibleWasPickedUp(GameObject collectible)
+    {
+        _gameController.PlayerPickedUpCollectibe();
+        Destroy(collectible);
     }
     
     private void SpawnCollectible()
     {
         int spawnIndex = Random.Range(0, collectibleSpawns.Count);
         GameObject collectible = Instantiate(collectiblePrefab, collectibleSpawns[spawnIndex].position, Quaternion.identity);
-        collectible.GetComponent<CollectibleSrcipt>().SetCollectibleManager(this);
+        var collectibleScript = collectible.GetComponent<CollectibleSrcipt>();
+        collectibleScript.SetCollectibleManager(this);
     }
     
     

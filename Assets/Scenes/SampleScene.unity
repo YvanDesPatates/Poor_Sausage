@@ -1641,6 +1641,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 568818237}
   gameOverCanvas: {fileID: 1233918652}
+  superCollectibleValue: 3
 --- !u!1 &1364666633
 GameObject:
   m_ObjectHideFlags: 0
