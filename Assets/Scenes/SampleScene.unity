@@ -1848,7 +1848,10 @@ MonoBehaviour:
   - {fileID: 1241056689}
   - {fileID: 1618347126}
   - {fileID: 2115589645}
-  collectiblePrefab: {fileID: 7220615864193929741, guid: 5f63e60a7fa623832ae7c5c0478f7d0c, type: 3}
+  classicCollectiblePrefab: {fileID: 7220615864193929741, guid: 5f63e60a7fa623832ae7c5c0478f7d0c, type: 3}
+  superCollectiblePrefab: {fileID: 7220615864193929741, guid: aa2d02539d0dc4d089ba232b9f04a761, type: 3}
+  superCollectibleSecondsBeforeNextSpawn: 8
+  superCollectibleSecondsBeforeDisappear: 5
 --- !u!4 &1469676998
 Transform:
   m_ObjectHideFlags: 0
