@@ -143,7 +143,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &55415453
 Transform:
   m_ObjectHideFlags: 0
@@ -154,7 +154,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.05, y: 3.317, z: 0}
-  m_LocalScale: {x: 0.10728, y: 0.10728, z: 0.10728}
+  m_LocalScale: {x: 0.12814596, y: 0.12814596, z: 0.12814596}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1704707894}
@@ -253,7 +253,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -269,6 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 535222b3a2f2a23678956fdec466b349, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentController: {fileID: 1704707895}
 --- !u!1 &74283861
 GameObject:
   m_ObjectHideFlags: 0
@@ -2358,7 +2359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb3ca7bdd25d5a88bb31c77b24624a56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bombRb: {fileID: 55415457}
+  bomb: {fileID: 55415452}
   spotLight: {fileID: 599078380}
   secondsBeforeBombFalls: 3
   minimalSpotAngle: 10

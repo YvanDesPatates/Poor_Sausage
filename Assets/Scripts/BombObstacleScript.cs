@@ -4,7 +4,7 @@ using UnityEngine.Serialization;
 
 public class BombObstacleScript : MonoBehaviour
 {
-    public Rigidbody bombRb;
+    public GameObject bomb;
     public Light spotLight;
     public float secondsBeforeBombFalls = 3;
     public float minimalSpotAngle = 10;
@@ -40,6 +40,6 @@ public class BombObstacleScript : MonoBehaviour
     private IEnumerator ThrowBomb()
     {
         yield return new WaitForSeconds(secondsBeforeBombFalls);
-        bombRb.isKinematic = false;
+        bomb.SetActive(true);
     }
 }

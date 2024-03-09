@@ -5,7 +5,8 @@ using UnityEngine;
 public class BombCollisionScript : MonoBehaviour
 {
     public BombObstacleScript parentController;
-    void OnCollisionEnter(Collision collision)
+    
+    void OnTriggerEnter(Collider other)
     {
         parentController.BombHasExploded();
     }
