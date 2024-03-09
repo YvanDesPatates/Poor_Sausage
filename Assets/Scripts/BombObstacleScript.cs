@@ -16,6 +16,12 @@ public class BombObstacleScript : MonoBehaviour
         StartCoroutine(BeforeThrowBomb());
         StartCoroutine(ThrowBomb());
     }
+    
+    public void BombHasExploded()
+    {
+        Destroy(gameObject);
+        //TODO: add explosion effect
+    }
 
     private IEnumerator BeforeThrowBomb()
     {
