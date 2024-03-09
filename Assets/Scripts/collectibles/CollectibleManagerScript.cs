@@ -30,14 +30,14 @@ public class CollectibleManagerScript : MonoBehaviour
 
     public void CollectibleWasPickedUp(GameObject collectible)
     {
-        _gameController.PlayerPickedUpCollectibe();
+        _gameController.PlayerPickedUpCollectible();
         Destroy(collectible);
         SpawnCollectible(classicCollectiblePrefab);
     }
     
     public void SuperCollectibleWasPickedUp(GameObject collectible)
     {
-        _gameController.PlayerPickedUpCollectibe();
+        _gameController.PlayerPickedUpSuperCollectible();
         Destroy(collectible);
     }
     

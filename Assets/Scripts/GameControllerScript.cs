@@ -9,12 +9,12 @@ public class GameControllerScript : MonoBehaviour
 
     private int _score = 0;
     
-    public void PlayerPickedUpCollectibe()
+    public void PlayerPickedUpCollectible()
     {
         _score++;
         scoreText.text = _score.ToString();
     }
-    public void PlayerPickedUpSuperCollectibe()
+    public void PlayerPickedUpSuperCollectible()
     {
         _score += superCollectibleValue;
         scoreText.text = _score.ToString();
