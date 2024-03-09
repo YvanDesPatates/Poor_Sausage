@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 public class CollectibleManagerScript : MonoBehaviour
@@ -9,11 +10,12 @@ public class CollectibleManagerScript : MonoBehaviour
     public List<Transform> collectibleSpawns;
     public GameObject classicCollectiblePrefab;
     public GameObject superCollectiblePrefab;
-    public float superCollectibleSecondsBeforeNextSpawn = 8;
-    public float superCollectibleSecondsBeforeDisappear = 5;
+    //time between two super collectible spawn
+    public float secondsBetweenTwoScSpawn = 8;
+    //time before super collectible disappear after spawn
+    public float secondsScStayOnTheMap = 5;
     
     private GameControllerScript _gameController;
-    private GameObject _currentSuperCollectible;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +25,7 @@ public class CollectibleManagerScript : MonoBehaviour
         }
         _gameController = GameObject.FindWithTag("GameController").GetComponent<GameControllerScript>();
         SpawnCollectible(classicCollectiblePrefab);
-        StartCoroutine(SpawnSuperCollectible());
+        StartCoroutine(SpawnSuperCollectibles());
     }
 
     public void CollectibleWasPickedUp(GameObject collectible)
@@ -48,16 +50,19 @@ public class CollectibleManagerScript : MonoBehaviour
     }
     
     //coroutine to spawn super collectible every 10 seconds
-    private IEnumerator SpawnSuperCollectible()
+    private IEnumerator SpawnSuperCollectibles()
     {
         while (true)
         {
-            Destroy(_currentSuperCollectible);
-            yield return new WaitForSeconds(superCollectibleSecondsBeforeNextSpawn);
-            _currentSuperCollectible = SpawnCollectible(superCollectiblePrefab);
-            yield return new WaitForSeconds(superCollectibleSecondsBeforeDisappear);
+            yield return new WaitForSeconds(secondsBetweenTwoScSpawn);
+            GameObject superCollectible = SpawnCollectible(superCollectiblePrefab);
+            StartCoroutine(DestroySuperCollectibleAfterTime(superCollectible));
         }
     }
     
-    
+    private IEnumerator DestroySuperCollectibleAfterTime(GameObject superCollectible)
+    {
+        yield return new WaitForSeconds(secondsScStayOnTheMap);
+        Destroy(superCollectible);
+    }
 }
