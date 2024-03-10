@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class BombObstacleScript : MonoBehaviour
+public class BombTrapScript : MonoBehaviour
 {
     public Transform playerTransform;
     public GameObject bombAndLightParent;

@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 7192205974565460188}
   - component: {fileID: 8471869274453521026}
   m_Layer: 0
-  m_Name: Laser Obstacle
+  m_Name: Laser Trap
   m_TagString: Deadly Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
