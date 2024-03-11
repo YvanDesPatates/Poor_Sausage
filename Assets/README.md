@@ -22,4 +22,5 @@ Collect as many sausages as possible! But beware of traps, the longer you wait, 
 
 ## Ideas of features
 **Poop** : The daschund can poop a special sausage with more value than the classic one, but poop the sausage take time so it's dangerous. You can poop a sauage each X time, or wait and your special sausage will raise in value each X time. This feature encourage players to bet on how many time they cans wait to maximize the value of the poop, but without waiting that there is too much traps to take a pause and...poop.
+**gamepad** : Refactoring player movements with an input manager and add gamepad support.
 
