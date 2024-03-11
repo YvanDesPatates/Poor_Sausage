@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 1337041044161464062}
   - component: {fileID: 3866714203707637620}
   m_Layer: 0
-  m_Name: Bomb Obstacle
+  m_Name: Bomb Trap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
