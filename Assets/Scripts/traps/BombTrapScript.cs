@@ -4,19 +4,20 @@ using UnityEngine.Serialization;
 
 public class BombTrapScript : MonoBehaviour
 {
-    public Transform playerTransform;
     public GameObject bombAndLightParent;
     public GameObject bomb;
     public float coolDownBetweenBombsInS = 5;
     public float secondsBeforeBombFalls = 3;
     public float minimalSpotAngle = 10;
 
+    private Transform _playerTransform;
     private Light _spotLight;
     private float _yPosition;
 
     // Start is called before the first frame update
     void Start()
     {
+        _playerTransform = GameObject.FindWithTag("Player").transform;
         _spotLight = GetComponentInChildren<Light>();
         _yPosition = transform.position.y;
         PrepareAndThrowBomb();
@@ -46,7 +47,7 @@ public class BombTrapScript : MonoBehaviour
 
     private IEnumerator BeforeThrowBomb()
     {
-        var playerPosition = playerTransform.position;
+        var playerPosition = _playerTransform.position;
         transform.SetPositionAndRotation( new Vector3(playerPosition.x, _yPosition, playerPosition.z), transform.rotation);
         float stepsDuration = secondsBeforeBombFalls / 3;
         float actualSpotAngle = _spotLight.spotAngle;
