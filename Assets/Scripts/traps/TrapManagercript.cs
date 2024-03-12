@@ -10,6 +10,7 @@ public class TrapManagercript : MonoBehaviour
     void Start()
     {
         SpawnTrap(trapPrefabs[0]);
+        StartCoroutine(SpawnTraps());
     }
     
     private IEnumerator SpawnTraps()
