@@ -4,7 +4,7 @@
 Collect as many sausages as possible! But beware of traps, the longer you wait, the more there are! Will you master the challenge of Poor Daschund ?
 
 ## To-do list
-- [x] player movments
+- [x] player basic movements
 - [x] collectible and score progressing on ATH
 - [X] super collectible that spawn from time to time and give more score
 - [x] first trap -> a bomb that spawn on top of the player and fall after X time. A light on the ground prevent that a bomb will fall.
@@ -15,7 +15,8 @@ Collect as many sausages as possible! But beware of traps, the longer you wait, 
 - [ ] player movements -> stop infinite jumps and improve movements (don't glide on the ground)
 - [ ] third trap -> ?
 - [ ] fourth trap -> ?
-- [ ] (started - just a canva) game over -> display game over and block everything else (movements, score, collectible spawn, traps...)
+- [ ] (started - just a canva) game over -> display game over and block everything else (movements, score, collectible spawn, traps...). Possibility to restart the game.
+- [ ] welcome screen -> display the game title and a start button.
 - [ ] think about a cool map (how many layers/levels, types of platforms...)
 - [ ] basics assets for all
 - [ ] basic sound effects -> collect, die, explosion, laser
