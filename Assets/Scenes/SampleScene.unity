@@ -1136,7 +1136,7 @@ MonoBehaviour:
   trapPrefabs:
   - {fileID: 3741410919714835928, guid: b17eac2c21359e34a99a8b44176b22ea, type: 3}
   - {fileID: 4678561814584755493, guid: 16aed4651ef8e8b1085073574b87254f, type: 3}
-  spawnRateInS: 7
+  spawnRateInS: 10
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
