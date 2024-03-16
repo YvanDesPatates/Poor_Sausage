@@ -7,6 +7,7 @@ TagManager:
   - Collectible
   - Deadly Obstacle
   - Laser Spawns
+  - Rotating Blade Spawns
   layers:
   - Default
   - TransparentFX
