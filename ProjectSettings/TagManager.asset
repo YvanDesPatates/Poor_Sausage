@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Collectible
   - Deadly Obstacle
+  - Laser Spawns
   layers:
   - Default
   - TransparentFX
