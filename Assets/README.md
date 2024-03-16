@@ -12,6 +12,7 @@ Collect as many sausages as possible! But beware of traps, the longer you wait, 
 
 - [ ] (started) second trap -> laser that active and deactive itself, moving for side to side
 - [ ] trapManager -> traps are randomly created each X time (depends on the trap) Game always start with bomb trap
+- [ ] player movements -> stop infinite jumps and improve movements (don't glide on the ground)
 - [ ] third trap -> ?
 - [ ] fourth trap -> ?
 - [ ] (started - just a canva) game over -> display game over and block everything else (movements, score, collectible spawn, traps...)

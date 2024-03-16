@@ -11,6 +11,8 @@ public class BombTrapScript : MonoBehaviour
 
     private Transform _playerTransform;
     private Light _spotLight;
+    private float _baseSpotAngle;
+    private Color _baseSpotColor;
     private float _yPosition;
 
     // Start is called before the first frame update
@@ -19,20 +21,22 @@ public class BombTrapScript : MonoBehaviour
         _playerTransform = GameObject.FindWithTag("Player").transform;
         _spotLight = GetComponentInChildren<Light>();
         _yPosition = transform.position.y;
+        _baseSpotAngle = _spotLight.spotAngle;
+        _baseSpotColor = _spotLight.color;
         PrepareAndThrowBomb();
     }
 
     public void BombHasExploded()
     {
+        bomb.SetActive(false);
+        bombAndLightParent.SetActive(false);
+        bomb.transform.SetLocalPositionAndRotation(Vector3.zero, bomb.transform.rotation);
         StartCoroutine(ThrowNextBomb());
         //TODO: add explosion effect
     }
 
     private IEnumerator ThrowNextBomb()
     {
-        bombAndLightParent.SetActive(false);
-        bomb.SetActive(false);
-        bomb.transform.SetLocalPositionAndRotation(Vector3.zero, bomb.transform.rotation);
         yield return new WaitForSeconds(coolDownBetweenBombsInS);
         bombAndLightParent.SetActive(true);
         PrepareAndThrowBomb();
@@ -46,10 +50,13 @@ public class BombTrapScript : MonoBehaviour
 
     private IEnumerator BeforeThrowBomb()
     {
+        _spotLight.spotAngle = _baseSpotAngle;
+        _spotLight.color = _baseSpotColor;
+        
         var playerPosition = _playerTransform.position;
         transform.SetPositionAndRotation( new Vector3(playerPosition.x, _yPosition, playerPosition.z), transform.rotation);
         float stepsDuration = secondsBeforeBombFalls / 3;
-        float actualSpotAngle = _spotLight.spotAngle;
+        float actualSpotAngle = _baseSpotAngle;
         float spotAngleReduction = (actualSpotAngle - minimalSpotAngle) / 3;
         for (int i = 0; i < 3; i++)
         {

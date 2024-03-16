@@ -141,7 +141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bombAndLightParent: {fileID: 4459400203728515823}
   bomb: {fileID: 5084607400921158416}
-  coolDownBetweenBombsInS: 6
+  coolDownBetweenBombsInS: 5
   secondsBeforeBombFalls: 3
   minimalSpotAngle: 10
 --- !u!1 &4459400203728515823
