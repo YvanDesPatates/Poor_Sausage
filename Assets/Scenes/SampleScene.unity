@@ -1352,37 +1352,6 @@ Transform:
   - {fileID: 2121745955}
   m_Father: {fileID: 198178041}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1128233707
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1128233708}
-  m_Layer: 0
-  m_Name: Laser Spawn Top
-  m_TagString: Laser Spawns
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1128233708
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1128233707}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.78, z: 0.31700003}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1971554499}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1135515011
 GameObject:
   m_ObjectHideFlags: 0
@@ -1632,7 +1601,7 @@ Transform:
   m_GameObject: {fileID: 1147168325}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.04314861, y: 2.5888, z: -0.52}
+  m_LocalPosition: {x: 0.04314861, y: 2.5888, z: -1.549}
   m_LocalScale: {x: 0.11006377, y: 0.11006377, z: 0.39447838}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2736,13 +2705,12 @@ Transform:
   m_GameObject: {fileID: 1971554498}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.857, y: -3.08, z: -1.728}
+  m_LocalPosition: {x: 2.857, y: -2.93, z: -2.014}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 660384731}
   - {fileID: 1318175654}
-  - {fileID: 1128233708}
   m_Father: {fileID: 953306273}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2014726725
