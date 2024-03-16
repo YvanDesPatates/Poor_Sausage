@@ -15,6 +15,7 @@ Collect as many sausages as possible! But beware of traps, the longer you wait, 
 - [ ] third trap -> ?
 - [ ] fourth trap -> ?
 - [ ] (started - just a canva) game over -> display game over and block everything else (movements, score, collectible spawn, traps...)
+- [ ] think about a cool map (how many layers/levels, types of platforms...)
 - [ ] basics assets for all
 - [ ] basic sound effects -> collect, die, explosion, laser
 - [ ] basic visual effects -> collect, explosion, laser (not die unless model already has an animation for)
