@@ -12,6 +12,9 @@ Collect as many sausages as possible! But beware of traps, the longer you wait, 
 - [x] third trap -> rotating blade that block the player path
 - [x] trapManager -> traps are randomly created each X time (depends on the trap) Game always start with bomb trap
 
+TO DO : refactor deadly collision to be detected by traps and not player because
+- there is always complications with bomb collisions
+- actually, every jump is a collision that the player script will check if it is deadly or not -> inefficient.
 
 - [ ] player movements -> stop infinite jumps and improve movements (don't glide on the ground)
 - [ ] fourth trap -> ?
