@@ -5,14 +5,24 @@ public class PlayerInteractions : MonoBehaviour
     private GameControllerScript _gameController;
     
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         _gameController = GameObject.FindWithTag("GameController").GetComponent<GameControllerScript>();
     }
     
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Deadly Obstacle"))
+        GameOverOnCollision(other.gameObject);
+    }
+    
+    private void OnCollisionEnter(Collision other)
+    {
+        GameOverOnCollision(other.gameObject);
+    }
+    
+    private void GameOverOnCollision(GameObject other)
+    {
+        if (other.CompareTag("Deadly Obstacle"))
         {
             _gameController.GameOver();
         }
