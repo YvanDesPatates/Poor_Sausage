@@ -8,4 +8,9 @@ public class BombCollisionScript : MonoBehaviour
     {
         parentController.BombHasExploded();
     }
+    
+    void OnCollisionEnter(Collision other)
+    {
+        parentController.BombHasExploded();
+    }
 }
