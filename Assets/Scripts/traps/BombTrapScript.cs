@@ -88,6 +88,6 @@ public class BombTrapScript : MonoBehaviour, IGameOverObserver
     public void GameOverNotification()
     {
         bomb.GetComponent<Rigidbody>().isKinematic = true;
-        _spotLight.enabled = false;
+        StopAllCoroutines();
     }
 }

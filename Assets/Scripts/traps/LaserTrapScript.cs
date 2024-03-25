@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
-public class LaserTrapScript : MonoBehaviour
+public class LaserTrapScript : MonoBehaviour, IGameOverObserver
 {
     public List<GameObject> deadlyLasers;
     public List<GameObject> preventionLasers;
@@ -12,10 +12,12 @@ public class LaserTrapScript : MonoBehaviour
     public float laserDurationInS = 5f;
 
     private static List<Vector3> _initialPlacements;
+    private HorizontalMovement _horizontalMovementScript;
 
     // Start is called before the first frame update
     void Start()
     {
+        _horizontalMovementScript = GetComponent<HorizontalMovement>();
         if (_initialPlacements == null)
         {
             _initialPlacements = new List<Vector3>();
@@ -66,5 +68,11 @@ public class LaserTrapScript : MonoBehaviour
 
             deadlyLasers.ForEach(laser => laser.SetActive(true));
         }
+    }
+    
+    public void GameOverNotification()
+    {
+        _horizontalMovementScript.enabled = false;
+        StopAllCoroutines();
     }
 }
