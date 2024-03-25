@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RotatingBladeScript : MonoBehaviour
+public class RotatingBladeScript : MonoBehaviour, IGameOverObserver
 {
     public float rotationSpeed = 25;
 
     private static List<Transform> _spawnPoints;
+    private bool _gameIsRunning = true;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +35,14 @@ public class RotatingBladeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(Vector3.forward, rotationSpeed * Time.deltaTime);
+        if (_gameIsRunning)
+        {
+            transform.Rotate(Vector3.forward, rotationSpeed * Time.deltaTime);
+        }
+    }
+    
+    public void GameOverNotification()
+    {
+        _gameIsRunning = false;
     }
 }
