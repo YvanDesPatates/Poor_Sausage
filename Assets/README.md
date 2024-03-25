@@ -1,7 +1,7 @@
-# Poor Daschund
+# Poor Sausage
 3D Arcade game.
 
-Collect as many sausages as possible! But beware of traps, the longer you wait, the more there are! Will you master the challenge of Poor Daschund ?
+Collect as many sausages as possible! But beware of traps, the longer you wait, the more there are! Will you master the challenge of Poor Sausage ?
 
 ## To-do list
 - [x] player basic movements
