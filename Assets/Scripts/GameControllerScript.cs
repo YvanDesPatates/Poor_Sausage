@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -8,6 +9,7 @@ public class GameControllerScript : MonoBehaviour
     public int superCollectibleValue = 3;
 
     private int _score = 0;
+    private readonly List<IGameOverObserver> _gameOverObservers = new();
     
     public void PlayerPickedUpCollectible()
     {
@@ -22,6 +24,18 @@ public class GameControllerScript : MonoBehaviour
     
     public void GameOver()
     {
+        NotifyGameOverObservers();
         gameOverCanvas.SetActive(true);
     }
+    
+    public void SubscribeToGameOverNotification(IGameOverObserver observer)
+    {
+        _gameOverObservers.Add(observer);
+    }
+    
+    private void NotifyGameOverObservers()
+    {
+        _gameOverObservers.ForEach(observer => observer.GameOverNotification());
+    }
+    
 }
