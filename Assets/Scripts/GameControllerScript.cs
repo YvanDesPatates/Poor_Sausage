@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameControllerScript : MonoBehaviour
 {
@@ -10,7 +12,15 @@ public class GameControllerScript : MonoBehaviour
 
     private int _score = 0;
     private readonly List<IGameOverObserver> _gameOverObservers = new();
-    
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            RestartGame();
+        }
+    }
+
     public void PlayerPickedUpCollectible()
     {
         _score++;
@@ -31,6 +41,11 @@ public class GameControllerScript : MonoBehaviour
     public void SubscribeToGameOverNotification(IGameOverObserver observer)
     {
         _gameOverObservers.Add(observer);
+    }
+    
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     
     private void NotifyGameOverObservers()

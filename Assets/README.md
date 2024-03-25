@@ -11,14 +11,11 @@ Collect as many sausages as possible! But beware of traps, the longer you wait, 
 - [x] second trap -> laser that active and deactive itself, moving for side to side
 - [x] third trap -> rotating blade that block the player path
 - [x] trapManager -> traps are randomly created each X time (depends on the trap) Game always start with bomb trap
-
-TO DO : refactor deadly collision to be detected by traps and not player because
-- there is always complications with bomb collisions
-- actually, every jump is a collision that the player script will check if it is deadly or not -> inefficient.
+- [x] game over -> display game over and block everything else (movements, score, collectible spawn, traps...). Possibility to restart the game.
+ 
 
 - [ ] player movements -> stop infinite jumps and improve movements (don't glide on the ground)
 - [ ] fourth trap -> ?
-- [ ] (started - just a canva) game over -> display game over and block everything else (movements, score, collectible spawn, traps...). Possibility to restart the game.
 - [ ] welcome screen -> display the game title and a start button.
 - [ ] think about a cool map (how many layers/levels, types of platforms...)
 - [ ] basics assets for all
