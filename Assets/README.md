@@ -14,6 +14,7 @@ Collect as many sausages as possible! But beware of traps, the longer you wait, 
 - [x] game over -> display game over and block everything else (movements, score, collectible spawn, traps...). Possibility to restart the game.
 - [x] player movements -> stop infinite jumps
 - [x] player movements -> improve movements (don't glide on the ground)
+- [x] player movements -> mouse cursor should not be blocked in the window
 
 
 - [ ] fourth trap -> ?
