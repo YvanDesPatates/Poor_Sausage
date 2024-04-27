@@ -11,7 +11,6 @@ public class OnRestartClick : MonoBehaviour
 
     public void OnMouseDown()
     {
-        Debug.Log("AHAHAHAHAH");
         _gameController.RestartGame();
     }
 }

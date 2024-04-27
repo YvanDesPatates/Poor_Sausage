@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class RotatingBladeScript : MonoBehaviour, IGameOverObserver
 {
@@ -9,7 +11,6 @@ public class RotatingBladeScript : MonoBehaviour, IGameOverObserver
     private static List<Transform> _spawnPoints;
     private bool _gameIsRunning = true;
 
-    // Start is called before the first frame update
     void Start()
     {
         if (_spawnPoints == null)
@@ -22,7 +23,7 @@ public class RotatingBladeScript : MonoBehaviour, IGameOverObserver
 
             if (_spawnPoints.Count == 0)
             {
-                throw new UnityException("laser trap need at least one spawn point! (with tag Laser Spawns)");
+                throw new UnityException("rotating blade trap need at least one spawn point! (with tag Rotating Blade Spawns)");
             }
         }
 
@@ -30,6 +31,12 @@ public class RotatingBladeScript : MonoBehaviour, IGameOverObserver
         float zRotation = Random.Range(0, 360);
         float yRotation = randomSpawn.rotation.eulerAngles.y;
         transform.SetPositionAndRotation(randomSpawn.position, Quaternion.Euler(0, yRotation, zRotation));
+    }
+
+    /** ensure that static variable is reset when quitting the current scene **/
+    private void OnDestroy()
+    {
+        _spawnPoints = null;
     }
 
     // Update is called once per frame
