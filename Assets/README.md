@@ -12,9 +12,10 @@ Collect as many sausages as possible! But beware of traps, the longer you wait, 
 - [x] third trap -> rotating blade that block the player path
 - [x] trapManager -> traps are randomly created each X time (depends on the trap) Game always start with bomb trap
 - [x] game over -> display game over and block everything else (movements, score, collectible spawn, traps...). Possibility to restart the game.
- 
+- [x] player movements -> stop infinite jumps
 
-- [ ] player movements -> stop infinite jumps and improve movements (don't glide on the ground)
+
+- [ ] player movements -> improve movements (don't glide on the ground)
 - [ ] fourth trap -> ?
 - [ ] welcome screen -> display the game title and a start button.
 - [ ] think about a cool map (how many layers/levels, types of platforms...)
@@ -24,6 +25,6 @@ Collect as many sausages as possible! But beware of traps, the longer you wait, 
 
 
 ## Ideas of features
-**Poop** : The daschund can poop a special sausage with more value than the classic one, but poop the sausage take time so it's dangerous. You can poop a sauage each X time, or wait and your special sausage will raise in value each X time. This feature encourage players to bet on how many time they cans wait to maximize the value of the poop, but without waiting that there is too much traps to take a pause and...poop.
+**Poop** : The daschund can poop a special sausage with more value than the classic one, but poop the sausage take time so it's dangerous. You can poop a sausage each X time, or wait and your special sausage will raise in value each X time. This feature encourage players to bet on how many time they cans wait to maximize the value of the poop, but without waiting that there is too much traps to take a pause and...poop.
 **gamepad** : Refactoring player movements with an input manager and add gamepad support.
 

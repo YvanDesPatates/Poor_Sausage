@@ -379,6 +379,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4942806095193537542, guid: 5f63e60a7fa623832ae7c5c0478f7d0c, type: 3}
   m_PrefabInstance: {fileID: 994381065}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &297445960
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 297445961}
+  m_Layer: 0
+  m_Name: Ground Check
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &297445961
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297445960}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.577, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1147168331}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &430507414
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,7 +422,7 @@ GameObject:
   - component: {fileID: 430507418}
   - component: {fileID: 430507417}
   - component: {fileID: 430507416}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: platform_bottom (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -723,7 +754,7 @@ GameObject:
   - component: {fileID: 590261989}
   - component: {fileID: 590261988}
   - component: {fileID: 590261987}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: platform_top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1082,7 +1113,7 @@ GameObject:
   - component: {fileID: 782872036}
   - component: {fileID: 782872035}
   - component: {fileID: 782872034}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: platform_bottom (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1453,7 +1484,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 23
+    m_Bits: 31
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -1676,7 +1707,7 @@ GameObject:
   - component: {fileID: 1135515015}
   - component: {fileID: 1135515014}
   - component: {fileID: 1135515013}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: platform_top (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1806,6 +1837,7 @@ MonoBehaviour:
   speed: 3
   rotationSpeed: 100
   jumpForce: 30
+  groundCheck: {fileID: 297445961}
 --- !u!54 &1147168327
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1919,6 +1951,7 @@ Transform:
   m_Children:
   - {fileID: 2059253143}
   - {fileID: 752075732}
+  - {fileID: 297445961}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1147168332
@@ -1945,7 +1978,7 @@ GameObject:
   - component: {fileID: 1157329356}
   - component: {fileID: 1157329355}
   - component: {fileID: 1157329354}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: platform_bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2215,7 +2248,7 @@ GameObject:
   - component: {fileID: 1304430907}
   - component: {fileID: 1304430906}
   - component: {fileID: 1304430905}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: platform_bottom (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2382,7 +2415,7 @@ GameObject:
   - component: {fileID: 1327948601}
   - component: {fileID: 1327948600}
   - component: {fileID: 1327948599}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: platform_bottom (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2607,7 +2640,7 @@ GameObject:
   - component: {fileID: 1456876620}
   - component: {fileID: 1456876619}
   - component: {fileID: 1456876618}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: platform_top (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2787,7 +2820,7 @@ GameObject:
   - component: {fileID: 1510324895}
   - component: {fileID: 1510324894}
   - component: {fileID: 1510324893}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: cubic platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3672,7 +3705,7 @@ GameObject:
   - component: {fileID: 2022925101}
   - component: {fileID: 2022925100}
   - component: {fileID: 2022925099}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: platform_bottom (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3960,7 +3993,7 @@ GameObject:
   - component: {fileID: 2121745958}
   - component: {fileID: 2121745957}
   - component: {fileID: 2121745956}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: platform_top (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
