@@ -12,10 +12,11 @@ Collect as many sausages as possible! But beware of traps, the longer you wait, 
 - [x] third trap -> rotating blade that block the player path
 - [x] trapManager -> traps are randomly created each X time (depends on the trap) Game always start with bomb trap
 - [x] game over -> display game over and block everything else (movements, score, collectible spawn, traps...). Possibility to restart the game.
- 
+- [x] player movements -> stop infinite jumps
+- [x] player movements -> improve movements (don't glide on the ground)
+- [x] player movements -> mouse cursor should not be blocked in the window
 
-- [ ] player movements -> stop infinite jumps
-- [ ] player movements -> improve movements (don't glide on the ground)
+
 - [ ] fourth trap -> ?
 - [ ] welcome screen -> display the game title and a start button.
 - [ ] think about a cool map (how many layers/levels, types of platforms...)

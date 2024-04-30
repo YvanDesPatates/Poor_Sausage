@@ -31,8 +31,8 @@ public class PlayerMove : MonoBehaviour, IGameOverObserver
             return;
         }
 
-        _horizontalInput = Input.GetAxis("Horizontal");
-        _verticalInput = Input.GetAxis("Vertical");
+        _horizontalInput = Input.GetAxisRaw("Horizontal");
+        _verticalInput = Input.GetAxisRaw("Vertical");
         _horizontalMouseInput = Input.GetAxis("Mouse X");
 
         Vector3 direction = new Vector3(_horizontalInput, 0, _verticalInput);

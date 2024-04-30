@@ -13,6 +13,10 @@ public class GameControllerScript : MonoBehaviour
     private int _score = 0;
     private readonly List<IGameOverObserver> _gameOverObservers = new();
 
+    private void Start()
+    {
+        SetCursorVisibility(false);
+    }
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
@@ -36,6 +40,7 @@ public class GameControllerScript : MonoBehaviour
     {
         NotifyGameOverObservers();
         gameOverCanvas.SetActive(true);
+        SetCursorVisibility(true);
     }
     
     public void SubscribeToGameOverNotification(IGameOverObserver observer)
@@ -51,6 +56,12 @@ public class GameControllerScript : MonoBehaviour
     private void NotifyGameOverObservers()
     {
         _gameOverObservers.ForEach(observer => observer.GameOverNotification());
+    }
+    
+    private void SetCursorVisibility(bool visible)
+    {
+        Cursor.visible = visible;
+        Cursor.lockState = visible ? CursorLockMode.None : CursorLockMode.Locked;
     }
     
 }
