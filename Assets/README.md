@@ -15,6 +15,7 @@ Collect as many sausages as possible! But beware of traps, the longer you wait, 
 - [x] player movements -> stop infinite jumps
 - [x] player movements -> improve movements (don't glide on the ground)
 - [x] player movements -> mouse cursor should not be blocked in the window
+- [x] fox asset for the player -> animated when walking
 
 
 - [ ] fourth trap -> ?
