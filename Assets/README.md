@@ -16,11 +16,12 @@ Collect as many sausages as possible! But beware of traps, the longer you wait, 
 - [x] player movements -> improve movements (don't glide on the ground)
 - [x] player movements -> mouse cursor should not be blocked in the window
 - [x] fox asset for the player -> animated when walking
+- [x] welcome screen -> display the game title and a start button.
 
 
 - [ ] fourth trap -> ?
+- [ ] UI -> Add button to main menu in Game Over + button should be sausages
 - [ ] collectibles -> add an effect to si it even if it is under or above the player
-- [ ] welcome screen -> display the game title and a start button.
 - [ ] think about a cool map (how many layers/levels, types of platforms...)
 - [ ] basics assets for all
 - [ ] basic sound effects -> collect, die, explosion, laser
