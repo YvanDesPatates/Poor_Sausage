@@ -18,6 +18,7 @@ Collect as many sausages as possible! But beware of traps, the longer you wait, 
 
 
 - [ ] fourth trap -> ?
+- [ ] collectibles -> add an effect to si it even if it is under or above the player
 - [ ] welcome screen -> display the game title and a start button.
 - [ ] think about a cool map (how many layers/levels, types of platforms...)
 - [ ] basics assets for all
