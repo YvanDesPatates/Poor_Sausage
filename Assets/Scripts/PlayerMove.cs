@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour, IGameOverObserver
 {
+    // public Animator animator;
+    [SerializeField] private Animator animator;
     [SerializeField] private float speed = 10;
     [SerializeField] private float rotationSpeed = 100;
     [SerializeField] private float jumpForce = 10;
@@ -21,6 +23,7 @@ public class PlayerMove : MonoBehaviour, IGameOverObserver
         _gameController = GameObject.FindWithTag("GameController").GetComponent<GameControllerScript>();
         _gameController.SubscribeToGameOverNotification(this);
         _rigidBody = GetComponent<Rigidbody>();
+        animator.speed = 2.5f;
     }
 
     // Update is called once per frame
@@ -36,6 +39,12 @@ public class PlayerMove : MonoBehaviour, IGameOverObserver
         _horizontalMouseInput = Input.GetAxis("Mouse X");
 
         Vector3 direction = new Vector3(_horizontalInput, 0, _verticalInput);
+
+        if (direction.z != 0) {
+            animator.enabled = true;
+        } else {
+            animator.enabled = false;
+        }
 
         transform.Translate(speed * Time.deltaTime * direction);
         transform.Rotate(Vector3.up, _horizontalMouseInput * rotationSpeed * Time.deltaTime);
